@@ -33,7 +33,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
   deploy:
-    working_directory: ~/ocean-landing
       steps:
         - sudo chmod -R 400 ~/ocean-landing/deploy/*
         - ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"
