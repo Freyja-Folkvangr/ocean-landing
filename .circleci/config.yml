@@ -33,11 +33,17 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Configure directories
-        command: sudo chmod -R 400 ~/ocean-landing/deploy/*; ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"; ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
+          name: Configure deploy permissions
+          command: sudo chmod -R 400 ~/ocean-landing/deploy/*
       - run:
-        name: Deploy to the server
-        command: rsync -rzO -e 'ssh -i ~/ocean-landing/deploy/ocean-landing.pem -p 22' ~/ocean-landing centos@entelocean.com:/var/www
+          name: Configure www ownership
+          command: ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
+      - run:
+          name: Configure www permissions
+          command: ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"
+      - run:
+          name: Deploy to the server
+          command: rsync -rzO -e 'ssh -i ~/ocean-landing/deploy/ocean-landing.pem -p 22' ~/ocean-landing centos@entelocean.com:/var/www
 workflows:
   version: 2
   build-deploy:
