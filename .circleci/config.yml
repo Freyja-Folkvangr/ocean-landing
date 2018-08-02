@@ -32,19 +32,19 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-	deploy:
-		working_directory: ~/ocean-landing
-		steps:
-			- sudo chmod -R 400 ~/ocean-landing/deploy/*
-			- ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"
-			- ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
-			- rsync -rzO -e 'ssh -i ~/ocean-landing/deploy/ocean-landing.pem -p 22' ~/ocean-landing centos@entelocean.com:/var/www
+  deploy:
+    working_directory: ~/ocean-landing
+      steps:
+        - sudo chmod -R 400 ~/ocean-landing/deploy/*
+        - ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"
+        - ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
+        - rsync -rzO -e 'ssh -i ~/ocean-landing/deploy/ocean-landing.pem -p 22' ~/ocean-landing centos@entelocean.com:/var/www
 		
 	
       # run tests!
       - run: yarn test
-    workflows:
-	version: 2
-	build_and_deploy:
-		jobs:
-			- deploy
+  workflows:
+    version: 2
+    build_and_deploy:
+      jobs:
+	  - deploy
