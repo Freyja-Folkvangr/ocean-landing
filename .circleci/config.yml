@@ -40,9 +40,6 @@ jobs:
         - ssh -i ~/ocean-landing/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
         - rsync -rzO -e 'ssh -i ~/ocean-landing/deploy/ocean-landing.pem -p 22' ~/ocean-landing centos@entelocean.com:/var/www
 		
-	
-      # run tests!
-      - run: yarn test
   workflows:
     version: 2
     build_and_deploy:
