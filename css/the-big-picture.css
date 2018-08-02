@@ -4,12 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
  */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
   background: url('../img/ocean-bg.png') no-repeat center bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .bg-dark{
