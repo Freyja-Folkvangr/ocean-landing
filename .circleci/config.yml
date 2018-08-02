@@ -43,7 +43,7 @@ jobs:
           command: ssh -i ./deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chmod -R 777 /var/www/"
       - run:
           name: Deploy to the server
-          command: pwd && rsync -rzO -e 'ssh -i ./deploy/ocean-landing.pem -p 22' ./project centos@entelocean.com:/var/www
+          command: pwd && rsync -rzO -e 'ssh -i ./deploy/ocean-landing.pem -p 22' ./project ubuntu@entelocean.com:/var/www
 workflows:
   version: 2
   build-deploy:
