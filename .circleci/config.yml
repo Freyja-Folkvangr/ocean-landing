@@ -34,7 +34,7 @@ jobs:
       - checkout
       - run:
           name: Configure deploy permissions
-          command: sudo chmod -R 400 /project/deploy/*
+          command: sudo chmod -R 400 ./project/deploy/*
       - run:
           name: Configure www ownership
           command: ssh -i ./project/deploy/ocean-landing.pem ubuntu@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
