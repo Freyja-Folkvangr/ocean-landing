@@ -69,6 +69,13 @@ body {
   background-color: #fff;
 }
 
+@media only screen and (max-device-width: 667px), screen and (max-width: 450px) {
+  #intercom-container .intercom-launcher-discovery-frame, #intercom-container .intercom-launcher-frame {
+    right: 10px!important;
+    bottom: 70px!important;
+  }
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
