@@ -1219,6 +1219,7 @@ pre code {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+    margin-bottom: 6rem!important;
   }
   .col-lg-7 {
     -ms-flex: 0 0 58.333333%;
@@ -7515,7 +7516,7 @@ button.bg-dark:focus {
 
 .mt-5,
 .my-5 {
-  margin-top: 1rem !important;
+  margin-top: 2rem !important;
 }
 
 .mr-5,
