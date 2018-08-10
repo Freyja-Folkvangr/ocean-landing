@@ -18,8 +18,3 @@ body {
 .bg-dark{
 	background:#4280EB !important;
 }
-@media only screen and (max-device-width: 667px), screen and (max-width: 450px){
-#intercom-container .intercom-launcher-discovery-frame, #intercom-container .intercom-launcher-frame {
-    right: 10px!important;
-    bottom: 70px!important;
-}
