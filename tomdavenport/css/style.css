@@ -30,7 +30,7 @@ body.preloader-site {
 .preloader-wrapper {
     height: 100%;
     width: 100%;
-    background: #FFF;
+    background: #4280EB;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@ body.preloader-site {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 120px;
+    width: 80px;
 }
 
 @media screen and (max-width: 768px) {
