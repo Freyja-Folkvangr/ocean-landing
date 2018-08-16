@@ -211,6 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   .fh5co-hero, .fh5co-parallax {
     height: inherit;
     padding: 2em 0;
+    background-size: cover;
   }
 }
 .fh5co-hero .fh5co-intro h1, .fh5co-parallax .fh5co-intro h1 {
