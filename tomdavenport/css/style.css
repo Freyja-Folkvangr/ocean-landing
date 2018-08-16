@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 .fh5co-hero, .fh5co-parallax {
   background-color: #555;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
 }
 .fh5co-hero .overlay, .fh5co-parallax .overlay {
