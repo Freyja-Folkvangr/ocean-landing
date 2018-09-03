@@ -44,6 +44,9 @@ jobs:
       - run:
           name: Deploy to the server
           command: pwd && rsync -rzO -e 'ssh -i ./deploy/ocean-landing.pem -p 22' ./ root@entelocean.com:/var/www
+      - run:
+          name: Configure the server
+          command: ansible-playbook ./deploy/install.yml -i ./deploy/hosts
 workflows:
   version: 2
   build-deploy:
