@@ -42,9 +42,6 @@ jobs:
           name: Configure www permissions
           command: ssh -i ./deploy/ocean-landing-aws.pem root@entelocean.cl "sudo chmod -R 777 /var/www/"
       - run:
-          name: upgrade rsync
-          command: sudo apt-get install --only-upgrade rsync
-      - run:
           name: Deploy to the server
           command: rsync -rzO -e 'ssh -i ./deploy/ocean-landing-aws.pem -p 22' ./ root@entelocean.cl:/var/www
 workflows:
