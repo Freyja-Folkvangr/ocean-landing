@@ -37,16 +37,16 @@ jobs:
           command: pwd && sudo chmod -R 400 ./deploy/*
       - run:
           name: Configure www ownership
-          command: ssh -i ./deploy/ocean-landing.pem root@entelocean.com "sudo chown -R ubuntu:ubuntu /var/www/"
+          command: ssh -i ./deploy/ocean-landing-aws.pem root@entelocean.cl "sudo chown -R ubuntu:ubuntu /var/www/"
       - run:
           name: Configure www permissions
-          command: ssh -i ./deploy/ocean-landing.pem root@entelocean.com "sudo chmod -R 777 /var/www/"
+          command: ssh -i ./deploy/ocean-landing-aws.pem root@entelocean.cl "sudo chmod -R 777 /var/www/"
       - run:
           name: upgrade rsync
           command: sudo apt-get install --only-upgrade rsync
       - run:
           name: Deploy to the server
-          command: rsync -rzO -e 'ssh -i ./deploy/ocean-landing.pem -p 22' ./ root@entelocean.com:/var/www
+          command: rsync -rzO -e 'ssh -i ./deploy/ocean-landing-aws.pem -p 22' ./ root@entelocean.cl:/var/www
 workflows:
   version: 2
   build-deploy:
