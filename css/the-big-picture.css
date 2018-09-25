@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-  background: url('../img/ocean-bg.jpg') no-repeat center bottom fixed;
+  background: url('../img/ocean-bg.jpg') no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
