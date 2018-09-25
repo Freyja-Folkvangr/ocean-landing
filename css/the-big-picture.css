@@ -18,3 +18,10 @@ body {
 .bg-dark{
 	background:#4280EB !important;
 }
+
+@media max-width: (768px){
+	.no-mobile{
+		display: none;
+	}
+
+}
