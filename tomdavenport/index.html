@@ -236,14 +236,15 @@
     token: "77495799-2a2a-4e6f-b536-d7414d720404",
     host: "https://wchat.freshchat.com",
     siteId: "tomdavenport",
+      locale:"es-LA",
       config: {
-          disableEvents: true,
+          disableEvents: false,
           cssNames: {
               widget: 'fc_frame',
               open: 'fc_open',
               expanded: 'fc_expanded'
           },
-          showFAQOnOpen: true,
+          showFAQOnOpen: false,
           hideFAQ: true,
           agent: {
               hideName: false,
@@ -273,28 +274,28 @@
                   chat: 'Hablemos',
                   chat_help: 'Comunícate con nosotros si tienes preguntas.',
                   faq: 'FAQ',
-                  faq_help: 'Browse our articles',
-                  faq_not_available: 'No Articles Found',
-                  faq_search_not_available: 'No articles were found for {{query}}',
-                  faq_useful: 'Was this article helpful?',
-                  faq_thankyou: 'Thank you for your feedback',
-                  faq_message_us: 'Message Us',
-                  push_notification: 'Don\'t miss out on any replies! Allow push notifications?',
-                  csat_question: 'Did we address your concerns??',
-                  csat_yes_question: 'How would you rate this interaction?',
-                  csat_no_question: 'How could we have helped better?',
-                  csat_thankyou: 'Thanks for the response',
-                  csat_rate_here: 'Submit your rating here',
+                  faq_help: 'Busca en nuestros artículos',
+                  faq_not_available: 'No se encuentran artículos',
+                  faq_search_not_available: 'No se encuentran artículos para {{query}}',
+                  faq_useful: '¿Te sirvió la información?',
+                  faq_thankyou: 'Gracias por el feedback',
+                  faq_message_us: 'Contáctanos',
+                  push_notification: 'No te pierdas las respuestas! ¿Habilitar notificaciones push?',
+                  csat_question: '¿Fue útil?',
+                  csat_yes_question: 'Califica esta interacción',
+                  csat_no_question: '¿Cómo podría ser mejor?',
+                  csat_thankyou: 'Gracias por responder',
+                  csat_rate_here: 'Califica aquí',
                   channel_response: {
-                      offline: 'We are currently away. Please leave us a message',
+                      offline: 'No estamos disponibles. Déjanos un mensaje',
                       online: {
                           minutes: {
-                              one: "Currently replying in {!time!} minutes ",
-                              more: "Typically replies in {!time!} minutes"
+                              one: "Ahora respondiendo en {!time!} min. ",
+                              more: "En promedio respondiendo en {!time!} min."
                           },
                           hours: {
-                              one: "Currently replying in under an hour",
-                              more: "Typically replies in {!time!} hours",
+                              one: "Ahora respondiendo en menos de una hora",
+                              more: "En promedio respondiendo en {!time!} horas",
                           }
                       }
                   }
