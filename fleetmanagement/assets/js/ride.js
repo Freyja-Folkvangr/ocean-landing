@@ -61,7 +61,7 @@ var lastDataReceived = null;
 
                 newRow = '<tr><th scope="row"> <div class="media align-items-center"> <a href="#" class="avatar rounded-circle mr-3"> <img alt="Image placeholder" src="assets/img/theme/bootstrap.jpg"> </a> <div class="media-body"> <span class="mb-0 text-sm">'+vehicle.cid+'</span> </div> </div> </th> <td>'+vehicle.PlateNumber+'</td> <td> <span class="badge badge-dot mr-4"> <i class="bg-success"></i>'+ ((vehicle.Status == "Active") ? 'activo' : 'inactivo')+'</span> </td> <td>'+vehicle.Creation_Date+'</td> <td>'+vehicle.City+'</td> <td class="text-right"> <div class="dropdown"> <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-ellipsis-v"></i> </a> <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow"> <a class="dropdown-item" href="#">Acción 1</a> <a class="dropdown-item" href="#">Acción 2</a> <a class="dropdown-item" href="#">Acción 3</a> </div> </div> </td> </tr>';
 
-                $('#tableBody').innerHTML(newRow);
+                $('#tableBody').html(newRow);
                 // locations.sort(function(a, b) {
                 //     return a.tst < b.tst;
                 // });
