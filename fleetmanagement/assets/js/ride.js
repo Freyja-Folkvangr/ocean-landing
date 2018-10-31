@@ -84,7 +84,7 @@ var lastDataReceived = null;
                 console.error('Error requesting new data: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
                 console.error("Full Error: ", jqXHR);
-                alert('An error occured when requesting new data:\n' + jqXHR.responseText);
+                //alert('An error occured when requesting new data:\n' + jqXHR.responseText);
             }
         });
     }
@@ -125,7 +125,7 @@ var lastDataReceived = null;
                 console.error('Error requesting new data: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
                 console.error("Full Error: ", jqXHR);
-                alert('An error occured when requesting new data:\n' + jqXHR.responseText);
+                //alert('An error occured when requesting new data:\n' + jqXHR.responseText);
             }
         });
     }
@@ -158,7 +158,7 @@ var lastDataReceived = null;
                 console.error('Error requesting new data: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
                 console.error("Full Error: ", jqXHR);
-                alert('An error occured when requesting new data:\n' + jqXHR.responseText);
+                //alert('An error occured when requesting new data:\n' + jqXHR.responseText);
             }
         });
     }
