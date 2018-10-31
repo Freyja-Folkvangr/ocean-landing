@@ -11,11 +11,11 @@ var lastDataReceived = null;
         if (token) {
             authToken = token;
         } else {
-            window.location.href = '/signin.html';
+            window.location.href = '/index.html';
         }
     }).catch(function handleTokenError(error) {
         alert(error);
-        window.location.href = '/signin.html';
+        window.location.href = '/index.html';
     });
     var interval, isConnected = false;
     function startLoop(){
@@ -73,21 +73,6 @@ var lastDataReceived = null;
         });
     }
 
-    function completeRequest(result) {
-        var unicorn;
-        var pronoun;
-        console.log('Response received from API: ', result);
-        unicorn = result.Unicorn;
-        pronoun = unicorn.Gender === 'Male' ? 'his' : 'her';
-        displayUpdate(unicorn.Name + ', your ' + unicorn.Color + ' unicorn, is on ' + pronoun + ' way.');
-        animateArrival(function animateCallback() {
-            displayUpdate(unicorn.Name + ' has arrived. Giddy up!');
-            WildRydes.map.unsetLocation();
-            $('#request').prop('disabled', 'disabled');
-            $('#request').text('Set Pickup');
-        });
-    }
-
     // Register click handler for #request button
     $(function onDocReady() {
         $('#request').click(handleRequestClick);
@@ -95,7 +80,7 @@ var lastDataReceived = null;
         $('#signOut').click(function() {
             WildRydes.signOut();
             alert("You have been signed out.");
-            window.location = "signin.html";
+            window.location = "index.html";
         });
         $(WildRydes.map).on('pickupChange', handlePickupChanged);
 

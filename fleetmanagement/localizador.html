@@ -224,6 +224,33 @@
         </ul>
       </div>
     </nav>
+    <!-- IAN MAP -->
+    <div id="noApiMessage" class="configMessage" style="display: none;">
+        <div class="backdrop"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Successfully Authenticated!</h3>
+            </div>
+            <div class="panel-body">
+                <p>This page is not functional yet because there is no API invoke URL configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 3.</p>
+                <p>In the meantime, if you'd like to test the Amazon Cognito user pool authorizer for your API, use the auth token below:</p>
+                <textarea class="authToken"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="noCognitoMessage" class="configMessage" style="display: none;">
+        <div class="backdrop"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">No Cognito User Pool Configured</h3>
+            </div>
+            <div class="panel-body">
+                <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
@@ -310,14 +337,26 @@
       </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid mt--7">
+    <div id="main" class="container-fluid mt--7">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow border-0">
+            <div id="map" style="height:450px;">
+              <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1_PUm-jldZQDwQnQ3eACca4VOKttACysy" width="100%" height="100%" ></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container-fluid mt--7">
       <div class="row">
         <div class="col">
           <div class="card shadow border-0">
             <div style="height: 450px;"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1_PUm-jldZQDwQnQ3eACca4VOKttACysy" width="100%" height="100%" ></iframe></div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Footer -->
       <footer class="footer">
@@ -360,6 +399,18 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3PjUqq81lIOfBPYXrQGWwK5T4ystZjA"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.0"></script>
+
+  <!-- GESTIÓN USUARIO --> 
+  <script src="assets/vendor/aws/jquery-3.1.0.js"></script>
+        <!-- <script src="js/vendor/bootstrap.min.js"></script> -->
+        <script src="assets/vendor/aws/aws-cognito-sdk.min.js"></script>
+        <script src="assets/vendor/aws/amazon-cognito-identity.min.js"></script>
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/cognito-auth.js"></script>
+        <script src="assets/js/google-map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA27IlXoEVWtqTjugrsmLJSCdwnYL8CSPM&callback=initMap" async defer></script>
+        <script src="assets/js/ride.js"></script>
+        
 </body>
 
 </html>
