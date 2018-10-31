@@ -1,5 +1,7 @@
 /*global WildRydes _config AmazonCognitoIdentity AWSCognito*/
 
+var alreadyAlerted = false;
+
 var WildRydes = window.WildRydes || {};
 
 (function scopeWrapper($) {
@@ -106,8 +108,8 @@ var WildRydes = window.WildRydes || {};
 
     $(function onDocReady() {
         $('#signinForm').submit(handleSignin);
-        $('#registrationForm').submit(handleRegister);
-        $('#verifyForm').submit(handleVerify);
+        // $('#registrationForm').submit(handleRegister);
+        // $('#verifyForm').submit(handleVerify);
     });
 
     function handleSignin(event) {
@@ -117,7 +119,7 @@ var WildRydes = window.WildRydes || {};
         signin(email, password,
             function signinSuccess() {
                 console.log('Successfully Logged In');
-                window.location.href = 'localizador.html';
+                window.location.href = 'dashboard.html';
             },
             function signinError(err) {
                 alert('Usuario o Contraseña incorrecta');
@@ -125,45 +127,45 @@ var WildRydes = window.WildRydes || {};
         );
     }
 
-    function handleRegister(event) {
-        var email = $('#emailInputRegister').val();
-        var password = $('#passwordInputRegister').val();
-        var password2 = $('#password2InputRegister').val();
+    // function handleRegister(event) {
+    //     var email = $('#emailInputRegister').val();
+    //     var password = $('#passwordInputRegister').val();
+    //     var password2 = $('#password2InputRegister').val();
 
-        var onSuccess = function registerSuccess(result) {
-            var cognitoUser = result.user;
-            console.log('user name is ' + cognitoUser.getUsername());
-            var confirmation = ('Registration successful. Please check your email inbox or spam folder for your verification code.');
-            if (confirmation) {
-                window.location.href = 'verify.html';
-            }
-        };
-        var onFailure = function registerFailure(err) {
-            alert('Usuario o Contraseña incorrecta');
-        };
-        event.preventDefault();
+    //     var onSuccess = function registerSuccess(result) {
+    //         var cognitoUser = result.user;
+    //         console.log('user name is ' + cognitoUser.getUsername());
+    //         var confirmation = ('Registration successful. Please check your email inbox or spam folder for your verification code.');
+    //         if (confirmation) {
+    //             window.location.href = 'verify.html';
+    //         }
+    //     };
+    //     var onFailure = function registerFailure(err) {
+    //         alert('Usuario o Contraseña incorrecta');
+    //     };
+    //     event.preventDefault();
 
-        if (password === password2) {
-            register(email, password, onSuccess, onFailure);
-        } else {
-            alert('Usuario o Contraseña incorrecta');
-        }
-    }
+    //     if (password === password2) {
+    //         register(email, password, onSuccess, onFailure);
+    //     } else {
+    //         alert('Usuario o Contraseña incorrecta');
+    //     }
+    // }
 
-    function handleVerify(event) {
-        var email = $('#emailInputVerify').val();
-        var code = $('#codeInputVerify').val();
-        event.preventDefault();
-        verify(email, code,
-            function verifySuccess(result) {
-                console.log('call result: ' + result);
-                console.log('Successfully verified');
-                alert('Verification successful. You will now be redirected to the login page.');
-                window.location.href = signinUrl;
-            },
-            function verifyError(err) {
-                alert('Usuario o Contraseña incorrecta');
-            }
-        );
-    }
+    // function handleVerify(event) {
+    //     var email = $('#emailInputVerify').val();
+    //     var code = $('#codeInputVerify').val();
+    //     event.preventDefault();
+    //     verify(email, code,
+    //         function verifySuccess(result) {
+    //             console.log('call result: ' + result);
+    //             console.log('Successfully verified');
+    //             alert('Verification successful. You will now be redirected to the login page.');
+    //             window.location.href = signinUrl;
+    //         },
+    //         function verifyError(err) {
+    //             alert('Usuario o Contraseña incorrecta');
+    //         }
+    //     );
+    // }
 }(jQuery));
