@@ -51,7 +51,7 @@ function drawDot(point, path, map) {
 
 function drawCar(lat, lon, map) {
   var image = {
-    url: 'https://png.icons8.com/metro/1600/car.png',
+    url: '../img/icons/car.png',
     // This marker is 20 pixels wide by 32 pixels high.
     //size: new google.maps.Size(200, 200),
     scaledSize: new google.maps.Size(20, 20),
