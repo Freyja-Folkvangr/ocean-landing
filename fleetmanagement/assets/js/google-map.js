@@ -56,9 +56,9 @@ function drawCar(lat, lon, map) {
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Vehículo: GW XZ 14</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Estado</b>: Activo </p>' +
-            '<p><b>Empresa</b>: Entel Ocean </p>' +
-            '<p><b>Conductor</b>: Jorge Nova </p>' +
+            '<p><b>Estado</b>: Activo</p>' +
+            '<p><b>Empresa</b>: RichieMirror Asociados</p>' +
+            '<p><b>Conductor</b>: Ricardo Espejo</p>' +
             '</div>'+
             '</div>';
 
