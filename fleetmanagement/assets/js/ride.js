@@ -38,6 +38,43 @@ var lastDataReceived = null;
             updatePositionInMap(latitude, longitude, map);    
         }
     }
+
+    function getVehicleData() {
+        $.ajax({
+            method: 'POST',
+            url: _config.api.invokeUrl + '/vehicleData',
+            headers: {
+                Authorization: authToken
+            },
+            // data: JSON.stringify({
+            //     lastDataReceived: lastDataReceived
+            // }),
+            contentType: 'application/json',
+            success: function receivedData(result){
+                console.log('Response received from API: ', result);
+                if (!result){
+                    console.log("Empry response");
+                }
+                var vehicles = result.vehicles;
+                console.log(vehicles);
+                // locations.sort(function(a, b) {
+                //     return a.tst < b.tst;
+                // });
+
+                // vehicles.forEach(location => {
+                //     setTimeout(populateTable(location), 500);
+                // });
+                
+            },
+            error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                console.error('Error requesting new data: ', textStatus, ', Details: ', errorThrown);
+                console.error('Response: ', jqXHR.responseText);
+                console.error("Full Error: ", jqXHR);
+                alert('An error occured when requesting new data:\n' + jqXHR.responseText);
+            }
+        });
+    }
+
     function getData() {
         $.ajax({
             method: 'POST',
