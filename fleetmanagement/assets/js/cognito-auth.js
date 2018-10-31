@@ -120,7 +120,7 @@ var WildRydes = window.WildRydes || {};
                 window.location.href = 'localizador.html';
             },
             function signinError(err) {
-                alert(err);
+                alert('Usuario o Contraseña incorrecta');
             }
         );
     }
@@ -139,14 +139,14 @@ var WildRydes = window.WildRydes || {};
             }
         };
         var onFailure = function registerFailure(err) {
-            alert(err);
+            alert('Usuario o Contraseña incorrecta');
         };
         event.preventDefault();
 
         if (password === password2) {
             register(email, password, onSuccess, onFailure);
         } else {
-            alert('Passwords do not match');
+            alert('Usuario o Contraseña incorrecta');
         }
     }
 
@@ -162,7 +162,7 @@ var WildRydes = window.WildRydes || {};
                 window.location.href = signinUrl;
             },
             function verifyError(err) {
-                alert(err);
+                alert('Usuario o Contraseña incorrecta');
             }
         );
     }
