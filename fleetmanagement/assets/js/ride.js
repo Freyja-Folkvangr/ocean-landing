@@ -79,7 +79,7 @@ var lastDataReceived = null;
         $('#set-date').click(handleSetDateClick);
         $('#signOut').click(function() {
             WildRydes.signOut();
-            alert("You have been signed out.");
+            alert("Has cerrado sesión.");
             window.location = "index.html";
         });
         $(WildRydes.map).on('pickupChange', handlePickupChanged);
