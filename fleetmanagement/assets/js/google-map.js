@@ -49,7 +49,7 @@ function drawDot(point, path, map) {
   return dot;
 }
 
-function drawCar(lat, lon, map) {
+function drawCar(lat, lon, map, newContentString) {
   var contentString = 
             '<div id="content">'+
             '<div id="siteNotice">'+
@@ -62,9 +62,9 @@ function drawCar(lat, lon, map) {
             '</div>'+
             '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
+  var infowindow = new google.maps.InfoWindow({
+    content: newContentString
+  });
 
   var image = {
     url: 'https://www.entelocean.com/fleetmanagement/assets/img/icons/car.png',
@@ -89,11 +89,11 @@ function drawCar(lat, lon, map) {
 }
 
 
-function updatePositionInMap(lat, lon, map) {
+function updatePositionInMap(lat, lon, map, newContentString) {
   addPolylineLatLng(lat, lon);
   if (currentMarker != null) {
     currentMarker.setMap(null);
   }
-  currentMarker = drawCar(lat, lon, map);
+  currentMarker = drawCar(lat, lon, map, newContentString);
 }
 
