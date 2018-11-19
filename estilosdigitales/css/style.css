@@ -76,7 +76,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.7);
+  /*background: rgba(0, 0, 0, 0.7);*/
   content: "";
 }
 
@@ -946,7 +946,7 @@ blockquote p > cite {
   position: absolute;
   z-index: 1901;
   width: 270px;
-  background: black;
+  background: #4280eb;
   top: 0;
   right: 0;
   top: 0;
