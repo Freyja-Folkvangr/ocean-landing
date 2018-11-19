@@ -174,7 +174,7 @@
 								<div class="gtco-item">
 									<img src="images/logo4.png" alt="" class="img-responsive">
 									<p>Avatar sobre color</p>
-									<a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.jpg" class="btn btn-sm btn-special" dowload>JPG</a><a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.png" class="btn btn-sm btn-special" download>PNG</a><a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.svg" class="btn btn-sm btn-special" download>SVG</a>
+									<a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.jpg" class="btn btn-sm btn-special" download>JPG</a><a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.png" class="btn btn-sm btn-special" download>PNG</a><a href="images/entelocean/avatar-sobrecolor/Ocean-avatar-white.svg" class="btn btn-sm btn-special" download>SVG</a>
 								</div>
 							</div>
 							<div class="item">
@@ -224,12 +224,12 @@
 			</div>
 		</div>
 
-		<div class="gtco-section fonts second">
+		<div class="gtco-section fonts second" id="tipografias">
 			<div class="gtco-container">
 				<div class="row">
 					
 					<div class="col-md-8 gtco-news">
-						<h3 id="tipografias"><i class="ti-uppercase icon" style="color:#4280eb;"></i> Fuentes tipográficas</h3>	
+						<h3><i class="ti-uppercase icon" style="color:#4280eb;"></i> Fuentes tipográficas</h3>	
 						<ul>
 							<li>
 								<a href="#">
@@ -257,38 +257,40 @@
 			</div>
 		</div>
 		
-		<div id="colors" class="gtco-section">
+		<div class="gtco-section" id="colores">
 			<div class="gtco-container">
 				<!-- LOGO -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 id="colores"><i class="ti-brush-alt icon" style="color:#4280eb;"></i> Nuestros colores</h3>
+						<h3><i class="ti-brush-alt icon" style="color:#4280eb;"></i> Nuestros colores - Haz click sobre cada formato de color para copiar en tu portapapeles</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 oceanorange text-center">
-						<p>#f16b46</p><p>rgb(241,107,70)</p><p>Pantone 1645 C</p>
+						<span id="hexcolor1" onclick="copyToClipboard('#hexcolor1')" style="cursor: pointer;">#f16b46</span><br>
+						<span id="rgbcolor1" onclick="copyToClipboard('#rgbcolor1')" style="cursor: pointer;">rgb(241,107,70)</span><br>
+						<span id="pantonecolor1" onclick="copyToClipboard('#pantonecolor1')" style="cursor: pointer;">Pantone 1645 C</span>
 					</div>
 					<div class="col-md-4 oceanblue text-center">
-						<p>#4280eb</p>
-						<p>rgb(66,128,235)</p>
-						<p>Pantone 279 C</p>
+						<span id="hexcolor2" onclick="copyToClipboard('#hexcolor2')" style="cursor: pointer;">#4280eb</span><br>
+						<span id="rgbcolor2" onclick="copyToClipboard('#rgbcolor2')" style="cursor: pointer;">rgb(66,128,235)</span><br>
+						<span id="pantonecolor2" onclick="copyToClipboard('#pantonecolor2')" style="cursor: pointer;">Pantone 279 C</span>
 					</div>
 					<div class="col-md-4 oceangray text-center">
-						<p>#a9a8a9</p>
-						<p>rgb(169,168,169)</p>
-						<p>Pantone cool gray 6c</p>
+						<span id="hexcolor3" onclick="copyToClipboard('#hexcolor3')" style="cursor: pointer;">#a9a8a9</span><br>
+						<span id="rgbcolor3" onclick="copyToClipboard('#rgbcolor3')" style="cursor: pointer;">rgb(169,168,169)</span><br>
+						<span id="pantonecolor3" onclick="copyToClipboard('#pantonecolor3')" style="cursor: pointer;">Pantone cool gray 6c</span>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="gtco-section fonts second">
+		<div class="gtco-section fonts second" id="presentaciones">
 			<div class="gtco-container">
 				<div class="row">
 					
 					<div class="col-md-6 gtco-news">
-						<h3 id="tipografias"><i class="ti-uppercase icon" style="color:#4280eb;"></i> Nuestras Presentaciones</h3>	
+						<h3><i class="ti-uppercase icon" style="color:#4280eb;"></i> Nuestras Presentaciones</h3>	
 						<ul>
 							<li>
 								<a href="#">
@@ -443,6 +445,16 @@ Un nuevo océano posible de conquistar (...)</p>
                 }
             }
         });
+	</script>
+	<script>
+		function copyToClipboard(element) {
+		  var $temp = $("<input>");
+		  $("body").append($temp);
+		  $temp.val($(element).text()).select();
+		  document.execCommand("copy");
+		  $temp.remove();
+		  alert('🌈 Color Copiado 🌈');
+		}
 	</script>
 	</body>
 </html>
