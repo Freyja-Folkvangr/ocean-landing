@@ -403,11 +403,82 @@ Un nuevo océano posible de conquistar (...)</p>
 		  alert('🌈 Color Copiado 🌈');
 		}
 	</script>
-    
+
     <script>
         window.fcWidget.init({
             token: "77495799-2a2a-4e6f-b536-d7414d720404",
-            host: "https://wchat.freshchat.com"
+            host: "https://wchat.freshchat.com",
+            source: "ocean-branding",
+            locale:"es-LA",
+            config: {
+                disableEvents: false,
+                cssNames: {
+                    widget: 'fc_frame',
+                    open: 'fc_open',
+                    expanded: 'fc_expanded'
+                },
+                showFAQOnOpen: false,
+                hideFAQ: false,
+                agent: {
+                    hideName: false,
+                    hidePic: false,
+                    hideBio: false,
+                },
+                headerProperty: {
+                    //If you have multiple sites you can use the appName and appLogo to overwrite the values.
+                    appName: 'Entel Ocean',
+                    //appLogo: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/2473-2c38490d8e4c91660d86ff54ba5391ea-medium_jpg.jpg?buster=1518574527',
+                    //backgroundColor: '#FFFF00',
+                    //foregroundColor: '#333333',
+                    //backgroundImage: 'https://wchat.freshchat.com/assets/images/texture_background_1-bdc7191884a15871ed640bcb0635e7e7.png'
+                },
+                content: {
+                    placeholders: {
+                        search_field: 'Buscar',
+                        reply_field: 'Responder',
+                        csat_reply: 'Agrega comentarios'
+                    },
+                    actions: {
+                        csat_yes: 'Sí',
+                        csat_no: 'No',
+                        push_notify_yes: 'Sí',
+                        push_notify_no: 'No',
+                        tab_faq: 'FAQ',
+                        tab_chat: 'Inbox',
+                        csat_submit: 'Envía'
+                    },
+                    headers: {
+                        chat: 'Hablemos...',
+                        chat_help: '...si tienes preguntas.',
+                        faq: 'FAQ',
+                        faq_help: 'Busca en nuestros artículos',
+                        faq_not_available: 'No se encuentran artículos',
+                        faq_search_not_available: 'No se encuentran artículos para {{query}}',
+                        faq_useful: '¿Te sirvió la información?',
+                        faq_thankyou: 'Gracias por el feedback',
+                        faq_message_us: 'Contáctanos',
+                        push_notification: 'No te pierdas las respuestas! ¿Habilitar notificaciones push?',
+                        csat_question: '¿Fue útil?',
+                        csat_yes_question: 'Califica esta interacción',
+                        csat_no_question: '¿Cómo podría ser mejor?',
+                        csat_thankyou: 'Gracias por responder',
+                        csat_rate_here: 'Califica aquí',
+                        channel_response: {
+                            offline: 'No estamos disponibles. Déjanos un mensaje',
+                            online: {
+                                minutes: {
+                                    one: "Ahora respondiendo en {!time!} min. ",
+                                    more: "En promedio respondiendo en {!time!} min."
+                                },
+                                hours: {
+                                    one: "Ahora respondiendo en menos de una hora",
+                                    more: "En promedio respondiendo en {!time!} horas",
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         });
     </script>
 
