@@ -1,0 +1,1 @@
+define([],function(){"use strict";var config={"getBSSInfoFlag":!1,"getMessageFlag":!1,"tipsMessageMode":1,"x_domain_type":"","x_cloud_type":""};return config});
