@@ -26,6 +26,10 @@ body {
   color: #777;
   background: #fff;
 }
+hr{
+  border-top: 1px solid #4280eb;
+  margin: 50px 100px 20px;
+}
 #lamarca{
   background: #fff !important;
 }
@@ -52,6 +56,27 @@ body {
   font-weight: 300;
   padding: 30px 20px;
   font-size: 20px;
+}
+#ppt-ocean::after{
+  content: '';
+  background-image: url('../images/ppt-ocean-after.png');
+  background-size: cover;
+  width: 70%;
+  height: 250px;
+  display: block;
+  position: absolute; 
+  top: 200px;
+  left: 80px;
+}
+@media (max-width: 768px){
+  #ppt-ocean::after{
+    width: 80%;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+  }
 }
 #page {
   position: relative;
@@ -200,6 +225,12 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li.has-dropdown {
   position: relative;
 }
+.dropdown-divider {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
 .gtco-nav ul li.has-dropdown > a {
   position: relative;
   padding-right: 20px !important;
@@ -235,7 +266,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 0;
   text-align: left;
-  background: #000;
+  background: #4280eb;
   padding: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -254,7 +285,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #000;
+  border-bottom-color: #4280eb;
   border-width: 8px;
   margin-left: -8px;
 }
@@ -268,10 +299,13 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li.has-dropdown .dropdown li a {
   padding: 2px 0;
   display: block;
-  color: #999999;
+  color: #cdcdcd;
   line-height: 1.2;
   text-transform: none;
   font-size: 15px;
+}
+.dropdown-divider{
+  margin: 1rem 0;
 }
 .gtco-nav ul li.has-dropdown .dropdown li a:hover {
   color: #fff;

@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<script src='//cdn.freshmarketer.com/372132/920270.js'></script>
-    	<script src="https://wchat.freshchat.com/js/widget.js"></script>
+	<script src="https://wchat.freshchat.com/js/widget.js"></script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Estilos digitales - Ocean</title>
@@ -80,7 +80,21 @@
 					<div class="col-xs-9 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Inicio</a></li>
-							<li><a href="#logo">Logo</a></li>
+							<li class="has-dropdown">
+								<a href="#logo">Logos y Marcas</a>
+								<ul class="dropdown">
+									<li><a href="#">Kamal</a></li>
+									<li><a href="#">Reef</a></li>
+									<li><a href="#">Cloud</a></li>
+									<li><a href="#">Sonar</a></li>
+									<li><a href="#">Mood</a></li>
+									<div class="dropdown-divider"></div>
+									<li><a href="#">Drill</a></li>
+									<li><a href="#">Facturanet</a></li>
+									<li><a href="#">Touch</a></li>
+									<li><a href="#">eMedical</a></li>
+								</ul>
+							</li>
 							<li><a href="#tipografias">Tipografías</a></li>
 							<li><a href="#colores">Colores</a></li>
 							<li><a href="contact.html">Presentaciones</a></li>
@@ -144,13 +158,13 @@
 					</div>
 				</div>
 				<div class="row" >
-					<div class="col-md-12">
+					<div class="col-md-12 mb-2">
 						<div class="owl-carousel owl-carousel-carousel">
 							<div class="item">
 								<div class="gtco-item">
 									<img src="images/logo1.png" alt="" class="img-responsive">
 									<p>Primario Principal</p>
-									<a href="images/entelocean/ocean-principal/entel-ocean-principal.jpg" class="btn btn-sm btn-special" download>JPG</a><a href="images/entelocean/ocean-principal/entel-ocean-principal.png" class="btn btn-sm btn-special" download>PNG</a><a href="images/entelocean/ocean-principal/entel-ocean-principal.svg" class="btn btn-sm btn-special" download>SVG</a>
+									<a href="images/entelocean/ocean-principal/entel-ocean-principal.jpg" class="btn btn-sm btn-special" download>JPG</a><a href="images/entelocean/ocean-principal/entel-ocean-principal.png" class="btn btn-sm btn-special" download>PNG</a><a href="images/entelocean/ocean-principal/entel-ocean-principal.svg" class="btn btn-sm btn-special" download="">SVG</a>
 								</div>
 							</div>
 							<div class="item">
@@ -233,6 +247,16 @@
 					</div>
 				</div>
 			</div>
+			<hr/>
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2>Nuestras marcas y sus logos</h2>
+						<p>¿Quieres descargar el logo de nuestras plataformas y productos? Haz click en el siguiente enlace y podrás revisar todas nuestras marcas en detalle</p>
+						<p><a href="marcas-ocean.html" class="btn btn-sm btn-special" download>Marcas y Logos</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="gtco-section fonts second" id="tipografias">
@@ -304,23 +328,22 @@
 								<span class="post-date">POWERPOINT</span>
 								<h3>Presentación Corporativa</h3>
 								<p>La presentación Corporativa tiene el formato predefinido de nuestros slides, es una presentación muy liviana con la cual podrás crear tu documento desde cero</p>
-								<p><a href="#" class="btn btn-sm btn-special">Descargar Presentación Corporativa (1,2Mb)</a></p>
+								<p><a href="images/entelocean/ocean-presentaciones/ocean-presentacion.pptx" class="btn btn-sm btn-special" download>Descargar Presentación Corporativa (600Kb aprox.)</a></p>
 							</li>
-							<hr>
-							<li>
+							<!-- <li>
 								<span class="post-date">POWERPOINT</span>
 								<h3>Presentación Creativa</h3>
 								<p>La presentación Creativa ideas para que puedas crear tus slides en base a algunas ideas y diseños que ya tenemos. Dentro de este formato podrás encontrar para tus slides de texto en 3 y 4 columnas, flujos, uso de imágenes y mucho más</p>
 								<p><a href="#" class="btn btn-sm btn-special">Descargar Presentación Creativa (4,3Mb)</a></p>
-							</li>
+							</li> -->
 						</ul>
-					</div>
-					<div class="col-md-5 col-md-offset-1 gtco-testimonials">
-						<p><img src="images/pptocean.png" width="100%"></p>
-						<p><a href="https://support.microsoft.com/es-cl/help/314960/how-to-install-or-remove-a-font-in-windows"><i class="ti-info-alt icon"></i> ¿Buscas alguna presentación que hayamos hecho?</a></p>
-						<p>Revisa el directorio de Nuestras presentaciones realizadas</p>
+						<p><i class="ti-info-alt icon"></i> ¿Buscas alguna presentación que hayamos hecho?</p>
+						<p>Revisa el directorio* de Nuestras presentaciones realizadas</p>
 						<p><a href="#" class="btn btn-sm btn-special disabled">Directorio Drive</a><a href="https://grupoentel-my.sharepoint.com/:f:/g/personal/jnova_entel_cl/EgXLXlRhnKNBkVFjd0NkykgBj07LyAshuT75qmw_YhKtxQ?e=QabSi0" class="btn btn-sm btn-special" target="_blank">Directorio OneDrive</a></p>
 						<p style="color:#f16b46;">*Necesitas tener permisos de red o de usuario para descargar estas presentaciones</p>
+					</div>
+					<div class="col-md-5 col-md-offset-1 gtco-testimonials">
+						<p id="ppt-ocean"><img src="images/pptocean.png" width="100%"></p>
 					</div>
 				</div>
 			</div>
@@ -366,7 +389,7 @@ Un nuevo océano posible de conquistar (...)</p>
 				<div class="gtco-container">
 					<div class="row">
 						<div class="col-md-6 text-left">
-							<p><small>&copy; 2016 Free HTML5. All Rights Reserved. </small></p>
+							<p><small>&copy; 2018 Entel Ocean. Todos los derechos reservados. Hecho con ♥️ en SCL. </small></p>
 						</div>
 					</div>
 				</div>
@@ -394,63 +417,6 @@ Un nuevo océano posible de conquistar (...)</p>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script>
-        window.fcWidget.init({
-            token: "77495799-2a2a-4e6f-b536-d7414d720404",
-            host: "https://wchat.freshchat.com",
-            source: "cloud-console",
-            tags: ["cloud", "paid"],
-            locale:"es-LA",
-            config: {
-                disableEvents: false,
-                cssNames: {
-                    widget: 'fc_frame',
-                    open: 'fc_open',
-                    expanded: 'fc_expanded'
-                },
-                showFAQOnOpen: false,
-                hideFAQ: true,
-                agent: {
-                    hideName: false,
-                    hidePic: false,
-                    hideBio: false,
-                },
-                headerProperty: {
-                    //If you have multiple sites you can use the appName and appLogo to overwrite the values.
-                    appName: 'Entel Secure Cloud',
-                    appLogo: 'https://www.entelocean.com/images/cloud-agent.jpg',
-                    backgroundColor: '#444',
-                    //foregroundColor: '#333333',
-                    //backgroundImage: 'https://wchat.freshchat.com/assets/images/texture_background_1-bdc7191884a15871ed640bcb0635e7e7.png'
-                },
-                content: {
-                    headers: {
-                        chat: 'Soporte Cloud',
-                        chat_help: 'Hablemos si tienes dudas.',
-                        push_notification: '¿Habilitar notificaciones push?',
-                        csat_question: '¿Fue útil?',
-                        csat_yes_question: 'Califica esta interacción',
-                        csat_no_question: '¿Cómo podría ser mejor?',
-                        csat_thankyou: 'Gracias por responder',
-                        csat_rate_here: 'Califica aquí',
-                        channel_response: {
-                            offline: 'No estamos disponibles. Déjanos un mensaje.',
-                            online: {
-                                minutes: {
-                                    one: "Respondiendo en {!time!} min. ",
-                                    more: "En promedio respondiendo en {!time!} min."
-                                },
-                                hours: {
-                                    one: "Respondiendo en menos de una hora",
-                                    more: "En promedio respondiendo en {!time!} horas",
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        });
-	</script>
-	<script>
 		function copyToClipboard(element) {
 		  var $temp = $("<input>");
 		  $("body").append($temp);
@@ -460,6 +426,85 @@ Un nuevo océano posible de conquistar (...)</p>
 		  alert('🌈 Color Copiado 🌈');
 		}
 	</script>
+
+    <script>
+        window.fcWidget.init({
+            token: "77495799-2a2a-4e6f-b536-d7414d720404",
+            host: "https://wchat.freshchat.com",
+            source: "ocean-branding",
+            locale:"es-LA",
+            config: {
+                disableEvents: false,
+                cssNames: {
+                    widget: 'fc_frame',
+                    open: 'fc_open',
+                    expanded: 'fc_expanded'
+                },
+                showFAQOnOpen: false,
+                hideFAQ: false,
+                agent: {
+                    hideName: false,
+                    hidePic: false,
+                    hideBio: false,
+                },
+                headerProperty: {
+                    //If you have multiple sites you can use the appName and appLogo to overwrite the values.
+                    appName: 'Entel Ocean',
+                    //appLogo: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/2473-2c38490d8e4c91660d86ff54ba5391ea-medium_jpg.jpg?buster=1518574527',
+                    //backgroundColor: '#FFFF00',
+                    //foregroundColor: '#333333',
+                    //backgroundImage: 'https://wchat.freshchat.com/assets/images/texture_background_1-bdc7191884a15871ed640bcb0635e7e7.png'
+                },
+                content: {
+                    placeholders: {
+                        search_field: 'Buscar',
+                        reply_field: 'Responder',
+                        csat_reply: 'Agrega comentarios'
+                    },
+                    actions: {
+                        csat_yes: 'Sí',
+                        csat_no: 'No',
+                        push_notify_yes: 'Sí',
+                        push_notify_no: 'No',
+                        tab_faq: 'FAQ',
+                        tab_chat: 'Inbox',
+                        csat_submit: 'Envía'
+                    },
+                    headers: {
+                        chat: 'Hablemos...',
+                        chat_help: '...si tienes preguntas.',
+                        faq: 'FAQ',
+                        faq_help: 'Busca en nuestros artículos',
+                        faq_not_available: 'No se encuentran artículos',
+                        faq_search_not_available: 'No se encuentran artículos para {{query}}',
+                        faq_useful: '¿Te sirvió la información?',
+                        faq_thankyou: 'Gracias por el feedback',
+                        faq_message_us: 'Contáctanos',
+                        push_notification: 'No te pierdas las respuestas! ¿Habilitar notificaciones push?',
+                        csat_question: '¿Fue útil?',
+                        csat_yes_question: 'Califica esta interacción',
+                        csat_no_question: '¿Cómo podría ser mejor?',
+                        csat_thankyou: 'Gracias por responder',
+                        csat_rate_here: 'Califica aquí',
+                        channel_response: {
+                            offline: 'No estamos disponibles. Déjanos un mensaje',
+                            online: {
+                                minutes: {
+                                    one: "Ahora respondiendo en {!time!} min. ",
+                                    more: "En promedio respondiendo en {!time!} min."
+                                },
+                                hours: {
+                                    one: "Ahora respondiendo en menos de una hora",
+                                    more: "En promedio respondiendo en {!time!} horas",
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
 	</body>
 </html>
 
