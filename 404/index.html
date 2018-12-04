@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>404 Page</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="not-found parallax">
+            <div class="sky-bg"></div>
+            <div class="wave-7"></div>
+            <div class="wave-6"></div>
+            <a class="wave-island" href="https://www.entelocean.com">
+                    <img src="http://res.cloudinary.com/andrewhani/image/upload/v1524501929/404/island.svg" alt="Island">
+                </a>
+            <div class="wave-5"></div>
+            <div class="wave-lost wrp">
+                <span>4</span>
+                <span>0</span>
+                <span>4</span>
+            </div>
+            <div class="wave-4"></div>
+            <div class="wave-boat">
+                <img class="boat" src="http://res.cloudinary.com/andrewhani/image/upload/v1524501894/404/boat.svg" alt="Boat">
+            </div>
+            <div class="wave-3"></div>
+            <div class="wave-2"></div>
+            <div class="wave-1"></div>
+            <div class="wave-message">
+                <p>Capitán estamos perdidos!</p>
+                <p>Click en la isla para volver</p>
+            </div>
+        </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+  <script>
+      window.fcWidget.init({
+          token: "77495799-2a2a-4e6f-b536-d7414d720404",
+          host: "https://wchat.freshchat.com",
+          source: "ocean-404",
+          locale:"es-LA",
+          config: {
+              disableEvents: false,
+              cssNames: {
+                  widget: 'fc_frame',
+                  open: 'fc_open',
+                  expanded: 'fc_expanded'
+              },
+              showFAQOnOpen: false,
+              hideFAQ: false,
+              agent: {
+                  hideName: false,
+                  hidePic: false,
+                  hideBio: false,
+              },
+              headerProperty: {
+                  //If you have multiple sites you can use the appName and appLogo to overwrite the values.
+                  appName: 'Entel Ocean',
+                  //appLogo: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/2473-2c38490d8e4c91660d86ff54ba5391ea-medium_jpg.jpg?buster=1518574527',
+                  //backgroundColor: '#FFFF00',
+                  //foregroundColor: '#333333',
+                  //backgroundImage: 'https://wchat.freshchat.com/assets/images/texture_background_1-bdc7191884a15871ed640bcb0635e7e7.png'
+              },
+              content: {
+                  placeholders: {
+                      search_field: 'Buscar',
+                      reply_field: 'Responder',
+                      csat_reply: 'Agrega comentarios'
+                  },
+                  actions: {
+                      csat_yes: 'Sí',
+                      csat_no: 'No',
+                      push_notify_yes: 'Sí',
+                      push_notify_no: 'No',
+                      tab_faq: 'FAQ',
+                      tab_chat: 'Inbox',
+                      csat_submit: 'Envía'
+                  },
+                  headers: {
+                      chat: 'Hablar con Ocean',
+                      faq: 'FAQ',
+                      faq_help: 'Encontrar respuestas de forma rápida',
+                      faq_not_available: 'No se pudo encontrar información',
+                      faq_search_not_available: 'No se pudo encontrar información para "{{query}}"',
+                      faq_useful: '¿Te sirvió la información?',
+                      faq_thankyou: 'Gracias por el feedback',
+                      faq_message_us: 'Contáctanos',
+                      push_notification: 'No te pierdas las respuestas! ¿Habilitar notificaciones push?',
+                      csat_question: '¿Fue útil?',
+                      csat_yes_question: 'Califica esta interacción',
+                      csat_no_question: '¿Cómo podría ser mejor?',
+                      csat_thankyou: 'Gracias por responder',
+                      csat_rate_here: 'Califica aquí',
+                      channel_response: {
+                          offline: 'No estamos disponibles. Déjanos un mensaje',
+                          online: {
+                              minutes: {
+                                  one: "Ahora respondiendo en {!time!} min. ",
+                                  more: "En promedio respondiendo en {!time!} min."
+                              },
+                              hours: {
+                                  one: "Ahora respondiendo en menos de una hora",
+                                  more: "En promedio respondiendo en {!time!} horas",
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      });
+  </script>
+</body>
+
+</html>
