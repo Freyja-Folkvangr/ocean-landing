@@ -247,7 +247,7 @@
         window.fcWidget.init({
             token: "77495799-2a2a-4e6f-b536-d7414d720404",
             host: "https://wchat.freshchat.com",
-            source: "ocean-datadriven",
+            siteId: "ocean-datadriven",
             locale:"es-LA",
             config: {
                 disableEvents: false,
@@ -259,9 +259,9 @@
                 showFAQOnOpen: false,
                 hideFAQ: true,
                 agent: {
-                    hideName: false,
-                    hidePic: false,
-                    hideBio: false,
+                    hideName: true,
+                    hidePic: true,
+                    hideBio: true,
                 },
                 headerProperty: {
                     //If you have multiple sites you can use the appName and appLogo to overwrite the values.
@@ -287,7 +287,7 @@
                         csat_submit: 'Envía'
                     },
                     headers: {
-                        chat: 'Hablar con los organizadores de Ocean',
+                        chat: 'Hablar con Ocean',
                         faq: 'FAQ',
                         faq_help: 'Encontrar respuestas de forma rápida',
                         faq_not_available: 'No se pudo encontrar información',
